@@ -16,7 +16,10 @@ buttons.forEach(button => {
         circleEl.style.top = yInside + 'px';
         circleEl.style.left = xInside + 'px';
 
-        this.appendChild(circleEl)
+        this.appendChild(circleEl);
+
+        //fix new dom creations
+        setTimeout(() => circleEl.remove(), 500)
 
     })
 })
